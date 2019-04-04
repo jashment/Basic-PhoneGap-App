@@ -8,7 +8,7 @@
     </feature>
     <name>Basic App</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Basic PhoneGap app with jquery-mobile
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
