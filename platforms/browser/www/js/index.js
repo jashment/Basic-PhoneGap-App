@@ -27,6 +27,19 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        StatusBar.backgroundColorByName("yellow");
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+
+        function onBatteryStatus(status) {
+            var statusLevel = status.level;
+            var statusPlugged = status.isPlugged;
+            document.getElementById('devTag4').innerHTML = ("Level: " + statusLevel + " isPlugged: " + statusPlugged);
+        }
+        var deviceVersion = device.version;
+        var deviceModel = device.model;
+        document.getElementById('devTag3').innerHTML = "Device Version: " + deviceVersion;
+        document.getElementById('devTag2').innerHTML = "Device Model: " + deviceModel;
+
     },
     // deviceready Event Handler
     //
